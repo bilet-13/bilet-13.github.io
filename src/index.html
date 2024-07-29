@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <button onclick="navigateTo('index.html')" class="active">About Me</button>
+        <button onclick="navigateTo('resume.html')">Resume</button>
+        <button onclick="navigateTo('projects.html')">Projects</button>
+    </nav>
+    <main>
+        <section class="intro-container">
+            <div class="intro-text">
+                <h1>Chun-Wei Liao</h1>
+                <h2>Introduction</h2>
+                <p>Born in Taiwan in 1999, I hold a Bachelor's degree in Computer Science from National Yang Ming Chiao Tung University (NYCU) and a Master's degree in Computer Science from National Taiwan University (NTU). I love coding (most of the time), chatting with people, exercising, reading, and exploring culinary delights.</p>
+                <h2>Contact Me</h2>
+                <p>You can find more about my professional journey on LinkedIn and explore my projects on GitHub:</p>
+                <ul class="list-unstyled">
+                    <li><a href="YOUR_LINKEDIN_URL" class="btn btn-primary" target="_blank">LinkedIn</a></li>
+                    <li class="mt-2"><a href="YOUR_GITHUB_URL" class="btn btn-secondary" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+            <div class="intro-photo">
+                <img src="pictures/profile.jpg" alt="Profile Picture" class="profile-picture">
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
