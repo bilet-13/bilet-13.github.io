@@ -177,3 +177,34 @@ a {
         padding: 60px 5px 5px;
     }
 }
+
+.repo-block {
+    color: #0366d6; /* GitHub link color */
+    display: block;
+    padding: 20px;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(27, 31, 35, 0.12), 0 1px 2px rgba(27, 31, 35, 0.24);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.repo-block:hover {
+    background-color: #f6f8fa;
+    box-shadow: 0 4px 6px rgba(27, 31, 35, 0.1), 0 1px 2px rgba(27, 31, 35, 0.1);
+}
+
+.repo-block a {
+    color: #0366d6; /* GitHub link color */
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.repo-description {
+    margin-top: 10px;
+    color: #586069; /* GitHub description color */
+    font-size: 16px;
+}

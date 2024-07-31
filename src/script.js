@@ -9,13 +9,20 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function fetchGitHubRepos() {
-    fetch("https://api.github.com/users/YOUR_GITHUB_USERNAME/repos")
+    fetch("https://api.github.com/users/bilet-13/repos")
         .then(response => response.json())
         .then(data => {
             const reposDiv = document.getElementById("github-repos");
-            data.forEach(repo => {
-                const repoElement = document.createElement("p");
-                repoElement.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a>`;
+
+            // Filter repos with more than 0 stars and sort them by stars in descending order
+            const filteredRepos = data.filter(repo => repo.stargazers_count > 0)
+                                    .sort((a, b) => b.stargazers_count - a.stargazers_count);
+
+            filteredRepos.forEach(repo => {
+                const repoElement = document.createElement("div");
+                repoElement.classList.add("repo-block");
+                repoElement.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a>
+                                          <p class="repo-description">${repo.description || 'No description available.'}</p>`;
                 reposDiv.appendChild(repoElement);
             });
         })
