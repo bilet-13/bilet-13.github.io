@@ -22,7 +22,10 @@ function fetchGitHubRepos() {
                 const repoElement = document.createElement("div");
                 repoElement.classList.add("repo-block");
                 repoElement.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a>
-                                          <p class="repo-description">${repo.description || 'No description available.'}</p>`;
+                                          <p class="repo-description">${repo.description || 'No description available.'}</p>
+                                          <div class="repo-meta">
+                                              <span><i class="fas fa-circle"></i> ${repo.language || 'N/A'}</span>
+                                          </div>`;
                 reposDiv.appendChild(repoElement);
             });
         })

@@ -6,6 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #333;
 }
 
 nav {
@@ -34,7 +35,7 @@ button:hover, .active {
 }
 
 main {
-    padding: 80px 20px 20px; /* Adjust padding to account for fixed navbar */
+    padding: 100px 20px 20px; /* Adjust padding to account for fixed navbar */
     max-width: 800px;
     width: 100%;
     background-color: white;
@@ -57,7 +58,7 @@ main {
 
 .intro-text {
     flex: 1;
-    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .intro-photo {
@@ -135,12 +136,14 @@ a {
     }
 
     .intro-text {
-        padding-right: 0;
+        padding-left: 0;
         margin-bottom: 20px;
     }
 
     .intro-photo {
+        order: -1;
         flex: 0 0 auto;
+        margin-bottom: 20px;
     }
 
     nav {
@@ -160,7 +163,7 @@ a {
     }
 
     main {
-        padding: 60px 10px 10px;
+        padding: 100px 10px 10px;
     }
 }
 
@@ -174,8 +177,22 @@ a {
     }
 
     main {
-        padding: 60px 5px 5px;
+        padding: 100px 5px 5px;
     }
+}
+
+.content {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+p a {
+    color: #0366d6;
+    text-decoration: underline;
 }
 
 .repo-block {
@@ -183,28 +200,60 @@ a {
     display: block;
     padding: 20px;
     border: 1px solid #e1e4e8;
-    border-radius: 6px;
+    border-radius: 8px;
     margin-bottom: 15px;
     text-decoration: none;
-    background-color: #fff;
+    background-color: #f9f9f9;
     box-shadow: 0 1px 3px rgba(27, 31, 35, 0.12), 0 1px 2px rgba(27, 31, 35, 0.24);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .repo-block:hover {
-    background-color: #f6f8fa;
+    background-color: #e1e8ff;
     box-shadow: 0 4px 6px rgba(27, 31, 35, 0.1), 0 1px 2px rgba(27, 31, 35, 0.1);
 }
 
 .repo-block a {
     color: #0366d6; /* GitHub link color */
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
 }
 
 .repo-description {
     margin-top: 10px;
     color: #586069; /* GitHub description color */
-    font-size: 16px;
+    font-size: 16px; /* Increased font size */
+}
+
+.repo-meta {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #586069;
+}
+
+.repo-meta span {
+    margin-right: 10px;
+}
+
+.repo-meta i {
+    margin-right: 5px;
+}
+
+@media (max-width: 600px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-content {
+        text-align: center;
+        padding: 0;
+    }
+
+    .profile-image {
+        width: 100px;
+    }
 }
