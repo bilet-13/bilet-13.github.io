@@ -108,6 +108,10 @@ a {
     transition: background-color 0.3s ease;
 }
 
+a:hover {
+    color: #800080;
+}
+
 .btn-primary {
     background-color: #007bff;
 }
@@ -155,7 +159,7 @@ a {
     }
 
     .profile-picture {
-        width: 100%;
+        width: 75%; /* Make the profile picture smaller */
     }
 
     h1 {
@@ -169,7 +173,7 @@ a {
 
 @media (max-width: 480px) {
     .profile-picture {
-        width: 100%;
+        width: 50%; /* Further reduce the size on very small screens */
     }
 
     h1 {
@@ -183,7 +187,7 @@ a {
 
 .content {
     max-width: 800px;
-    margin: auto;
+    margin: 0 auto;
     background: #fff;
     padding: 20px;
     border-radius: 10px;
