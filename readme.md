@@ -6,8 +6,7 @@ This is a simple personal website hosted on github pages with three sections: Ab
 ## File Structure
 
 - `index.html`: Main page with About Me section.
-- `resume.html`: Page displaying your resume PDF.
-- `projects.html`: Page showing your GitHub repositories.
+- `resume.html`: Page displaying my resume PDF.
+- `projects.html`: Page showing my GitHub repositories.
 - `style.css`: CSS styles for the website.
 - `script.js`: JavaScript for navigation and fetching GitHub repositories.
-- `resume.pdf`: Your resume PDF file.
