@@ -3,33 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
+    <title>Chun-Wei (William) Liao — Backend &amp; Infrastructure Engineer</title>
+    <meta name="description" content="Chun-Wei (William) Liao — backend and infrastructure engineer. M.S. ECE at the University of Washington, graduating March 2027. Looking for SWE new grad roles.">
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
     <nav>
-        <button onclick="navigateTo('index.html')" class="active">About Me</button>
-        <button onclick="navigateTo('src/resume.html')">Resume</button>
-        <button onclick="navigateTo('src/projects.html')">Projects</button>
+        <a href="index.html" class="active">About</a>
+        <a href="src/projects.html">Projects</a>
+        <a href="src/resume.html">Resume</a>
     </nav>
     <main>
         <section class="intro-container">
-            <div class="intro-text">
-                <h1>Chun-Wei Liao</h1>
-                <h2>Introduction</h2>
-                <p>Born in Taiwan in 1999, I hold a Bachelor's degree in Computer Science from National Yang Ming Chiao Tung University (NYCU) and a Master's degree in Computer Science from National Taiwan University (NTU). I love coding (most of the time), chatting with people, exercising, reading, and exploring culinary delights.</p>
-                <h2>Contact Me</h2>
-                <p>You can find more about my professional journey on LinkedIn and explore my projects on GitHub:</p>
-                <ul class="list-unstyled">
-                    <li><a href="https://www.linkedin.com/in/chun-wei-liao-ba593a25a/" class="btn btn-primary" target="_blank">LinkedIn</a></li>
-                    <li class="mt-2"><a href="https://github.com/bilet-13" class="btn btn-secondary" target="_blank">GitHub</a></li>
-                </ul>
-            </div>
             <div class="intro-photo">
-                <img src="src/pictures/profile.jpg" alt="Profile Picture" class="profile-picture">
+                <img src="src/pictures/profile.jpg" alt="Chun-Wei Liao" class="profile-picture">
+            </div>
+            <div class="intro-text">
+                <h1>Chun-Wei (William) Liao</h1>
+                <p class="tagline">Backend · Distributed Systems · Infrastructure</p>
+                <p class="availability">Looking for SWE New Grad roles starting 2027</p>
+                <p>
+                    I build backend services and the infrastructure around them. Most recently I spent
+                    the summer at <strong>Chainguard</strong> writing Go services on GCP, where I cut a
+                    vulnerability-reporting pipeline's BigQuery cost by 99.88% and brought its p99 API
+                    latency down from 55 seconds to 2.8.
+                </p>
+                <p>
+                    Before graduate school in the US, I shipped production mobile features to 10k+ daily
+                    users at Perfect Corp. and built LLM fine-tuning infrastructure at Bigobject. These
+                    days I am most interested in distributed systems and in making things measurably
+                    faster and cheaper.
+                </p>
+
+                <h2>At a glance</h2>
+                <ul class="facts">
+                    <li>
+                        <span class="label">Education</span>
+                        M.S. Electrical &amp; Computer Engineering, University of Washington — March 2027
+                    </li>
+                    <li>
+                        <span class="label">Previously</span>
+                        M.S. Computer Science, National Taiwan University · B.S. Computer Science, NYCU
+                    </li>
+                    <li>
+                        <span class="label">Experience</span>
+                        Chainguard (SWE Intern) · Perfect Corp. (SWE) · Bigobject (AI Engineer)
+                    </li>
+                    <li>
+                        <span class="label">Working with</span>
+                        Go · gRPC · Python · PostgreSQL · Redis · GCP · Terraform · Docker
+                    </li>
+                    <li>
+                        <span class="label">Based in</span>
+                        Seattle, WA
+                    </li>
+                </ul>
+
+                <h2>Elsewhere</h2>
+                <ul class="links">
+                    <li><a href="https://www.linkedin.com/in/chun-wei-liao/" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="https://github.com/bilet-13" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="src/resume.html">Résumé</a></li>
+                </ul>
             </div>
         </section>
     </main>
-    <script src="src/script.js"></script>
 </body>
 </html>

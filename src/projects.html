@@ -3,24 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Projects — Chun-Wei (William) Liao</title>
+    <meta name="description" content="Selected backend, distributed systems and infrastructure projects by Chun-Wei (William) Liao.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-        <button onclick="navigateTo('../index.html')">About Me</button>
-        <button onclick="navigateTo('resume.html')">Resume</button>
-        <button onclick="navigateTo('projects.html')" class="active">Projects</button>
+        <a href="../index.html">About</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="resume.html">Resume</a>
     </nav>
     <main>
-        <div class="content">
-            <h1>Projects</h1>
-            <p>Here are some of my 
-                <a href="https://github.com/bilet-13" target="_blank">GitHub</a> 
-                repositories:
+        <h1>Projects</h1>
+        <p class="tagline">Selected work. More on <a href="https://github.com/bilet-13" target="_blank" rel="noopener">GitHub</a>.</p>
+
+        <h2>Not on GitHub</h2>
+        <div class="repo-block">
+            <a href="#" onclick="return false;">Fault-Tolerant Distributed Key-Value Store</a>
+            <p class="repo-description">
+                Strongly consistent replicated store built on Multi-Paxos. Keeps serving as long as a
+                majority of nodes are up; a stable-leader optimisation cuts each write from two network
+                round trips to one. Passes 27/27 fault-injection tests covering 20% message loss,
+                network partitions and reordering, plus a 1M+ state model check.
             </p>
-            <div id="github-repos"></div>
+            <div class="repo-meta"><span>Java · Multi-Paxos · coursework, private repo</span></div>
         </div>
+        <div class="repo-block">
+            <a href="#" onclick="return false;">GPU Kernels for LLM Inference</a>
+            <p class="repo-description">
+                CUDA kernels on an NVIDIA T4 — 2D/3D grid operations scaling to 1B elements and a
+                shared-memory Gaussian blur. Currently building a fused 4-bit dequantisation GEMV
+                kernel for LLM decoding, benchmarked against cuBLAS FP16.
+            </p>
+            <div class="repo-meta"><span>C++ · CUDA · Nsight Compute · in progress</span></div>
+        </div>
+
+        <h2>On GitHub</h2>
+        <div id="github-repos"></div>
     </main>
     <script src="script.js"></script>
 </body>

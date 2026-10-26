@@ -1,6 +1,12 @@
-function navigateTo(page) {
-    window.location.href = page;
-}
+// Repositories to show, in the order they should appear. Star count is not a
+// useful signal at this scale, so the list is curated rather than filtered.
+const FEATURED_REPOS = [
+    "flash_sale_system",
+    "Chainguard-mini_chainctl",
+    "chatRoom",
+    "ApplyPilot",
+    "No_code_DNN"
+];
 
 document.addEventListener("DOMContentLoaded", function () {
     if (window.location.pathname.includes("projects.html")) {
@@ -9,16 +15,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function fetchGitHubRepos() {
-    fetch("https://api.github.com/users/bilet-13/repos")
+    // per_page=100 so every repo comes back; the default 30 was cutting the list off
+    fetch("https://api.github.com/users/bilet-13/repos?per_page=100&sort=updated")
         .then(response => response.json())
         .then(data => {
             const reposDiv = document.getElementById("github-repos");
+            const byName = new Map(data.map(repo => [repo.name, repo]));
 
-            // Filter repos with more than 0 stars and sort them by stars in descending order
-            const filteredRepos = data.filter(repo => repo.stargazers_count > 0)
-                                    .sort((a, b) => b.stargazers_count - a.stargazers_count);
+            const repos = FEATURED_REPOS
+                .map(name => byName.get(name))
+                .filter(Boolean);
 
-            filteredRepos.forEach(repo => {
+            repos.forEach(repo => {
                 const repoElement = document.createElement("div");
                 repoElement.classList.add("repo-block");
                 repoElement.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a>
